@@ -5,26 +5,7 @@
  3.https://unsplash.com/es/fotos/aMj4K3a-nYQ  azul
  5.https://unsplash.com/es/fotos/_z5gR67v4NI roja
 */
-/* camperas:
-1.https://unsplash.com/es/fotos/e2lIvjdqGjw
-2.
-3.
-4.
-*/
-/* buzos:
-1.https://unsplash.com/es/fotos/RIinxQosgrc 
-2.
-3.
-4.
-*/
-/* jeans:
-1. https://unsplash.com/es/fotos/17qC7l19hMI
-2.
-3.
-4.
-*/
 
-/*  */
 
 const products = [ 
   //camisetas
@@ -43,8 +24,8 @@ const products = [
     name: 'Campera Verde You',
     price: 38000,
     category: 'camperas', 
-    img: 'https://images.unsplash.com/photo-1629353923238-df930a5216fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FtcGVyYXMlMjB2ZXJkZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
-    stock: 7, 
+    img: 'https://images.unsplash.com/photo-1633931764492-8ecb7742ebc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGphY2tldCUyMGdyZWVufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    stock: 7,   
     descrip: 'Campera Verde'   
   },
   //Buzos
@@ -75,7 +56,7 @@ export const getProducts = () => {
        setTimeout(() => {
            resolve(products);   
        }, 500)   
-
+ 
  
     })    
 }

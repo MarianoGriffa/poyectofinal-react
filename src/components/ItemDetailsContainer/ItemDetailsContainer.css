@@ -10,3 +10,17 @@
 .ItemDetailsContainer .wrapper {
   background-color: aquamarine;
 }
+
+.ItemDetailsContainer .card-img {
+  width: 300px;
+  height: auto;
+} 
+
+.ItemDetailsContainer .card-img .image {
+  width: 250px;
+  margin: 0 auto;
+}
+ 
+.ItemDetailsContainer .title.is-5 {
+  margin-bottom: 10px; 
+} 

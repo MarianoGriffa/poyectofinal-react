@@ -4,11 +4,11 @@ export const ItemDetails = ({ id, name, img, descrip, stock, price }) => {
 
   return (    
       <div className="card-img"> 
-      <h4 className="title is-4">{ name }</h4>
-          <figure className="image is-1by1"> 
+      <h5 className="title is-5">{ name }</h5>
+          <figure className="image"> 
             <img src={ img } alt={ name } />  
           </figure>          
-
+ 
         <div className="card-content">
           <div className="media-content">
             <h6 className="subtitle is-6">{ descrip }</h6>  
