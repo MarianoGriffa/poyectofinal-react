@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.navbar.is-primary {
+  background-color: #00d1b2;
+  color: #fff;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a:hover{
+color: white;
+}
+ 
+.navbar {
+  min-height: 6rem; 
+  align-items: center;
+} 
+
+.navbar-menu {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-brand {
+  align-items: center;
+  min-height: 0;
+}
+.title:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.navbar-start {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  gap: 0 40px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+
+.card-img {
+  background-color: aquamarine;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+footer{
+  margin-top: 10px;
+}
+
+.navbar-item {
+  margin: 0 6px;
+}
+
+.title.is-3 {
+  text-align: center;
+  padding: 20px 0;
+}
+.title:not(.is-spaced) + .subtitle {
+  margin-top: 0;
+}
+
+.button.is-fullwidth {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card-content {
+  padding: 1.2rem; 
+}
+
+.image.is-1by1 img {
+  object-fit: cover;
+}
+
+.cantidad {
+   text-align: center;
+    font-size: 1.5rem; 
+}
+
+.Option{
+  background-color: #222;
+  color: aquamarine; 
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.ActiveOption {
+  background-color: aquamarine;
+  color: #222; 
+  padding: 6px 12px; 
+  border-radius: 6px;
+}
+
+.ActiveOption:hover {
+  color: #222;
+}
+
+.numerito {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 500;
 }

@@ -1,0 +1,20 @@
+
+.Controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.Counter {
+  text-align: center;
+}
+
+.Button {
+  cursor: pointer; 
+  background-color: #99b1e7;   
+  color: #222;   
+  padding: 5px 12px; 
+  border: none;
+  border-radius: 6px; 
+}

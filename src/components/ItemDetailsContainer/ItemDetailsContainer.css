@@ -1,0 +1,12 @@
+
+.ItemDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin: 20px auto;
+} 
+
+.ItemDetailsContainer .wrapper {
+  background-color: aquamarine;
+}
