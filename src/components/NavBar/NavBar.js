@@ -9,12 +9,12 @@ import { Link, NavLink } from "react-router-dom";
      </Link>  
     <div className="navbar-menu">     
      <div className="navbar-start">  
+        <NavLink to={`/`} className={({isActive}) => isActive ? 'ActiveOption' :    'Option' }>Todos</NavLink>  
         <NavLink to={`/category/camisetas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Camisetas</NavLink>
         <NavLink  to={`/category/buzos`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Buzos</NavLink>
         <NavLink to={`/category/camperas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Camperas</NavLink>
-        <NavLink to={`/category/jeans`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option' }>Jeans</NavLink>
     </div>                  
-     </div>          
+     </div>           
    
     <CardWidget />                
   </nav>   

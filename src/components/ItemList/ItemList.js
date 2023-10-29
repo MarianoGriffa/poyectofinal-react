@@ -1,15 +1,18 @@
-import { Item } from '../Item/Item';
+import { Item } from '../Item/Item'; 
 
-export const ItemList = ({ products }) => { 
+export const ItemList = ({ items }) => { 
     
-  return ( 
+  return (   
       <div className="card"> 
-           {
-            products?.map( ( prod ) => (
-             <Item  key={ prod.id} { ...prod }  /> 
-              
+           { 
+            items.map( ( item ) => (
+             <Item  
+              key={item.id} 
+              item={ item }                  
+              />         
+               
              ))  
-           }
+           } 
 
      </div>   
     

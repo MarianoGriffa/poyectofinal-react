@@ -10,11 +10,32 @@
   text-align: center;
 }
 
+.Number {
+  font-weight: 700;
+}
+ 
+
 .Button {
-  cursor: pointer; 
-  background-color: #99b1e7;   
-  color: #222;   
-  padding: 5px 12px; 
-  border: none;
+  cursor: pointer;   
+  background-color: #a89dff;   
+  color: #222;    
+  padding: 6px 16px;
+  font-weight: 500; 
+  border: none; 
   border-radius: 6px; 
+}
+
+.count-container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; 
+} 
+
+.count {
+  font-weight: 600;
+}
+
+.add-btn-count {
+   margin-top: 10px;
 }
