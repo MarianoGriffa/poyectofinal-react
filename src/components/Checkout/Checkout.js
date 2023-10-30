@@ -1,90 +1,96 @@
-import React, { useContext } from "react";
-import "bulma/css/bulma.css";       
-import 'bulma/css/bulma.min.css'; 
-import { Button, Container, Content, Form } from "react-bulma-components";
-import '../../index.css';
-import { useNavigate } from "react-router-dom";
+// import React, { useContext } from "react";
 // import { CartContext } from "../../context/CartContext";
-   
-  export const Checkout = () => {  
+import { useState } from "react";
+import { Button, Container, Content, Form } from "react-bulma-components";
+import { useNavigate } from "react-router-dom";
+import "bulma/css/bulma.min.css";
+import "bulma/css/bulma.css";
+import "../../index.css";   
 
-    // const {totalPrice} = useContext(CartContext);
- 
-     const navigate = useNavigate()
-     const handleBackToCart = () => navigate('/cart') 
-     
-      return (
-        <>
-        <h3 className="title is-3 is-spaced">Finalizar compra</h3>     
-        <Container className="container-form">  
-        <Content className="content-form">   
-        <Form.Field>     
-        <Form.Label>Nombre y Apellido</Form.Label>
-        <Form.Control className="control"> 
-          <Form.Input className="input" type="text" placeholder="Text input" required/> 
-        </Form.Control>  
-      </Form.Field> 
+export const Checkout = () => {
+  // const { cart, totalPrice } = useContext(CartContext)
 
-      <Form.Field> 
-        <Form.Label>Número de celular</Form.Label>
-        <Form.Input className="input"  required
-         type="tel" name="phone" placeholder="123456789" pattern="[0-9]{9}" maxLength="9"
-        /> 
-      </Form.Field>  
-       
-      <Form.Field>  
-        <Form.Label className="label">Email</Form.Label>
-        <Form.Control className="control has-icons-left has-icons-right">
-          <Form.Input className="input is-danger" type="email" placeholder="nombre@example.com" />     
-        </Form.Control> 
-      </Form.Field> 
-        
-      <Form.Field> 
-        <Form.Label className="label">Repetir Email</Form.Label>
-        <Form.Control className="control has-icons-left has-icons-right">
-          <Form.Input className="input is-danger" type="email"
-            name="emailRepeat" placeholder="nombre@example.com"
-          />   
-        </Form.Control> 
-      </Form.Field>
+  const [dataForm, setDataForm] = useState({
+    name: '',
+    phone: '',
+    email: '', 
+    repeatEmail: ''
+  }) 
 
-      <Form.Field>
-        <Form.Control>  
-          <div className="select">
-            <Form.Select>  
-              <option>Tipo de pago</option>
-              <option>Efectivo</option>
-              <option>Tarjeta debito/credito</option>
-            </Form.Select> 
-          </div>   
-        </Form.Control> 
-      </Form.Field>
-       
-      <Form.Field>
-        <Form.Label >Mensaje</Form.Label>
-        <Form.Control className="control">
-          <textarea className="textarea" placeholder="Textarea"></textarea>
-        </Form.Control>
-      </Form.Field>
-       
-      </Content> 
-         <div className="footer-form">     
-              <div className="footer-volver">
-                <Button 
-                className="btn-back-menu button is-normal is-info is-outlined" 
-                onClick={handleBackToCart}>     
-                Volver a carrito</Button>   
-              </div>   
-              <div colSpan="4"></div>           
-              <div>        
-                <Button 
-                className="button is-success" 
-                >   
-                Enviar</Button>  
-              </div>    
-          </div>
-      </Container>
-      </>
- )     
+  const navigate = useNavigate();
+  const handleBackToCart = () => navigate("/cart");
+
+const handleOnChange = (evt) => {
+   setDataForm({
+    ...dataForm,
+    [evt.target.name]:[evt.target.value]
+   })    
 } 
-  
+
+
+  return (
+    <>
+      <h3 className="title is-3 is-spaced">Finalizar compra!</h3>
+      <Container className="container-form">
+        <Content className="content-form">
+        <Form.Field>
+            <Form.Field> 
+              <Form.Label>Nombre:</Form.Label>
+              <Form.Input
+                type="text"  
+                name="name"
+                value={dataForm.name}
+                onChange={handleOnChange}
+                placeholder="Nombre"
+              /> 
+            </Form.Field>
+
+            <Form.Field>
+              <Form.Label>Teléfono:</Form.Label>
+              <Form.Input
+                type="number"  
+                name="phone" 
+                value={dataForm.phone}
+                onChange={handleOnChange}
+                placeholder="Ingresá tu teléfono"
+              />
+            </Form.Field> 
+
+            <Form.Field>
+              <Form.Label>Email:</Form.Label>
+              <Form.Input
+                type="email"
+                name="email"
+                placeholder="Ingresá tu email"
+                value={dataForm.email}
+                onChange={handleOnChange}
+              /> 
+            </Form.Field> 
+
+            <Form.Field className="mb-3">
+              <Form.Label>Repetir email:</Form.Label>
+              <Form.Input 
+                type="email" 
+                name="repeatEmail"
+                value={dataForm.repeatEmail}
+                onChange={handleOnChange}
+                placeholder="Reingresá tu email"
+              />  
+            </Form.Field> 
+            <Form.Field className="footer-form" >
+            <Button className="footer-volver button is-dark is-outlined"
+             onClick={handleBackToCart}  
+            >  
+              Volver al carrito 
+            </Button>   
+            <div colSpan="4"></div>
+            <Button className="button is-primary" type="submit">
+              Finalizar compra 
+            </Button>       
+            </Form.Field>  
+            </Form.Field>
+        </Content> 
+      </Container>
+    </>
+  );
+}

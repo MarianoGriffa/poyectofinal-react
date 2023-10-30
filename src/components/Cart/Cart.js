@@ -4,7 +4,7 @@ import { Container, Button } from 'react-bulma-components';
 import { Link, useNavigate }  from "react-router-dom"; 
 import eliminarIcon from  "../../assets/icon-trash.png";  
 import bagX from  "../../assets/bag-x.svg";  
-import './Cart.css';              
+import './Cart.css';               
         
 export const Cart = () => {            
    
@@ -15,7 +15,7 @@ export const Cart = () => {
   const handleBackToMenu = () => navigate("/");
   const handleGoToCheckout = () => navigate("/checkout"); 
  
-if (cart.length === 0) {    
+if (cart.length === 0) {     
   return (
     <div className="container-pedido-void"> 
       <h1 className="title is-2">MI PEDIDO</h1>
@@ -56,7 +56,7 @@ if (cart.length === 0) {
                     className="info-card-cart">
                     <img className="image is-64x64 img-pedido" 
                     src={cartItem.imgUrl} alt={cartItem.name} /> 
-                    <div> 
+                    <div>  
                     </div>   
                   </Link>             
                 </td>
@@ -79,12 +79,10 @@ if (cart.length === 0) {
                 <td className="text-card-cart text-center divider-card-cart">${cartItem.quantity * cartItem.price}</td>
                 <Button className="button is-danger img-eliminar"   
                   onClick={() => removeItem(cartItem.id)} >    
-                  <img   
-                   src={eliminarIcon}
-                   alt="Delete" />                 
-                  </Button>                    
-              </tr>   
-            ))} 
+                  <img src={eliminarIcon} alt="Delete" />                 
+                  </Button>                     
+              </tr>    
+            ))}  
           </tbody>
           
         </table>  

@@ -5,6 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import {  Card } from "react-bulma-components"; 
 import Swal from "sweetalert2";  
 import { Link } from "react-router-dom";
+import '../../index.css';
     
 export const ItemDetails = ({ item }) => {   
  
@@ -47,7 +48,7 @@ const showMessage = (quantity) =>  {
             >{ item.price }</strong></p>    
             <p className="subtitle is-6 mb-4">Stock: { item.stock }</p>     
           </div>        
-         <Card.Footer> 
+         <Card.Footer className="card-footer"> 
          {
           isCant ? (  
             <>
