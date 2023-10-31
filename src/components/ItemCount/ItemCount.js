@@ -31,10 +31,10 @@ import { Button } from 'react-bulma-components';
          +
         </Button>
       </div>
-      <Button className="add-btn-count"
-       color="info" 
+      <Button className="add-btn-count mb-4"
+       color="info"  
        onClick={ handleAdd }
-       disabled={stock === 0}>
+       disabled={stock === 0}> 
        Agregar al carrito 
        </Button>  
     </div> 

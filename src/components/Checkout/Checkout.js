@@ -5,8 +5,8 @@ import { Button, Container, Content, Form } from "react-bulma-components";
 import { useNavigate } from "react-router-dom";
 import "bulma/css/bulma.min.css";
 import "bulma/css/bulma.css";
-import "../../index.css";   
-
+import "../../index.css";     
+ 
 export const Checkout = () => {
   // const { cart, totalPrice } = useContext(CartContext)
 
@@ -15,19 +15,57 @@ export const Checkout = () => {
     phone: '',
     email: '', 
     repeatEmail: ''
-  }) 
+  })   
 
   const navigate = useNavigate();
   const handleBackToCart = () => navigate("/cart");
 
-const handleOnChange = (evt) => {
+const handleOnChange = (evt) => { 
    setDataForm({
     ...dataForm,
     [evt.target.name]:[evt.target.value]
-   })    
-} 
+   })     
+}  
 
+  // const generarOrden = (evt) => { 
 
+  //   evt.preventDefault()
+
+  //   const order = {}
+
+  //   order.buyer = dataForm
+  //   order.items = cartList.map(({id, name, price}) => ({name, price, id}))
+  //   order.total = precioTotal()
+
+  //   if (!dataForm.name || !dataForm.phone || !dataForm.email || dataForm.email !== dataForm.validarEmail) {
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'Error',
+  //       text: '¡Verifique que los campos hayan sido completados correctamente!',
+  //       confirmButtonColor: '#d2691e',
+  //     })
+  //   }
+    
+  //   else {
+  //     const db = getFirestore()
+  //     const queyCollection =  collection(db, 'orders')
+
+  //     addDoc(queyCollection, order)
+  //     .then(resp => console.log(resp))
+  //     .catch(err => console.log(err))
+      
+  //     Swal.fire({
+  //       icon: 'success',
+  //       title: '¡Orden creada con éxito!',
+  //       showConfirmButton: false,
+  //       timer: 2500,
+  //       timerProgressBar: true,
+  //       allowOutsideClick: false,
+  //       allowEscapeClick: false
+  //     })
+  //   }
+  // } 
+   
   return (
     <>
       <h3 className="title is-3 is-spaced">Finalizar compra!</h3>
@@ -65,13 +103,13 @@ const handleOnChange = (evt) => {
                 value={dataForm.email}
                 onChange={handleOnChange}
               /> 
-            </Form.Field> 
+            </Form.Field>  
 
             <Form.Field className="mb-3">
               <Form.Label>Repetir email:</Form.Label>
               <Form.Input 
                 type="email" 
-                name="repeatEmail"
+                name="repeatEmail" 
                 value={dataForm.repeatEmail}
                 onChange={handleOnChange}
                 placeholder="Reingresá tu email"
@@ -82,15 +120,15 @@ const handleOnChange = (evt) => {
              onClick={handleBackToCart}  
             >  
               Volver al carrito 
-            </Button>   
+            </Button>    
             <div colSpan="4"></div>
             <Button className="button is-primary" type="submit">
               Finalizar compra 
-            </Button>       
-            </Form.Field>  
+            </Button>        
+            </Form.Field>   
             </Form.Field>
         </Content> 
-      </Container>
+      </Container> 
     </>
   );
 }

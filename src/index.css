@@ -1,42 +1,51 @@
 
-
 .navbar.is-primary {
   background-color: #00d1b2;
   color: #fff;
-  padding: 0 40px;
+  padding: 0 40px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-a:hover{
-color: white;
-}
+  min-height: 6rem;
+}  
  
+.navbar-start a:hover{
+color: white;
+}     
+
 .navbar {
   min-height: 6rem; 
   align-items: center;
-} 
+}  
 
 .navbar-menu {
   flex-grow: 0;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}  
+ 
+.navbar-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 40px;  
+}    
+
+.navbar-menu .navbar-start { 
+  margin-right: 0; 
 }
 
-.navbar-brand {
+.title .navbar-brand { 
+  display: flex;
   align-items: center;
-  min-height: 0;
-}
+  min-height: 6rem; 
+}  
+ 
 .title:not(:last-child) {
   margin-bottom: 0;
-}
-
-.navbar-start {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  display: flex;
-  gap: 0 40px;
-}
+} 
 
 .card {
   display: flex;
@@ -56,7 +65,9 @@ color: white;
   padding: 10px; 
   border: none;
   border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02); 
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);  
 }
 
 footer{
@@ -79,47 +90,53 @@ footer{
   display: flex;
   width: 80%;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 auto; 
   justify-content: center;
 }
 
 .card-content {
-  padding: 1.2rem; 
-}
-.card-footer {
-margin: 0 auto;
+  padding: 1.2rem;  
+  text-align: center;
 } 
-
-.image  img {
+ 
+ .footer-volver-detail {
+  margin-top: 10px;
+  display: block;
+}     
+ 
+.image img {
   object-fit: cover;
   height: 300px;
-}
+} 
 
-.image.is-1by1 {
+.image.is-1by1.image-category {
   padding-top: 0;
   width: 200px; 
   height: 200px;
-  margin: 0 auto;
-}
+    
+} 
+.image-category {
+  margin: 0 auto; 
+} 
 
-.image.is-2by1 {
-  padding-top: 0;
-  width: 480px; 
-  height: 320px; 
+.image.is-2by1.image-detail { 
+  padding-top: 0;  
+  width: 480px;    
+  height: 320px;   
   margin: 0 auto;
-  object-fit: cover;
-}  
+  object-fit: cover; 
+}     
 
 .cantidad {
    text-align: center;
     font-size: 1.5rem; 
 }
-
+ 
 .Option{
   background-color: #222;
   color: rgb(50, 228, 169); 
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 6px; 
 }
 
 .ActiveOption {
@@ -132,7 +149,6 @@ margin: 0 auto;
 .ActiveOption:hover {
   color: #222; 
 }
-
 
 .numerito {
   color: white;
@@ -189,3 +205,10 @@ margin: 0 auto;
 .footer-volver {
   margin: 0;
 }  
+
+
+@media screen and (min-width: 1024px) {
+  .navbar-start {
+      margin-right: 0;
+  }  
+}

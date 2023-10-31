@@ -11,20 +11,20 @@ export const Item =  memo(  ({ item } ) => {
     <div className="column">        
  
       <div className="card-img">  
-          <figure className="image is-1by1">
+          <figure className="image is-1by1 image-category">
             <img src={ item.imgUrl } alt={ item.name } /> 
           </figure>             
  
         <div className="card-content">  
-          <h5 className="title is-5">{ item.name }</h5>
+          <h5 className="subtitle is-6">{ item.name }</h5>
           <div className="media-content"> 
-            <p>Precio: ${ item.price }</p>  
-            <footer > 
+            <h6 className="title is-5">Precio: ${ item.price }</h6>  
+            <footer >   
             <Link to={`/item/${item.id}`}     
             className="button is-info"
             >Ver detalle</Link>       
             </footer>   
-          </div>   
+          </div>    
   
         </div>   
        </div>  
