@@ -2,18 +2,18 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Container, Button } from 'react-bulma-components';
 import { Link, useNavigate }  from "react-router-dom"; 
-import './Cart.css';                
-        
+import './Cart.css';                 
+         
 export const Cart = () => {              
    
   const { cart, removeItem, clearCart, totalPrice, subtractQuantity, addQuantity } = useContext(CartContext) 
- 
+  
   const navigate = useNavigate();   
 
   const handleBackToMenu = () => navigate("/");
   const handleGoToCheckout = () => navigate("/checkout"); 
  
-if (cart.length === 0) {     
+if (cart.length === 0) {      
   return (
     <div className="container-pedido-void"> 
       <h1 className="title is-2">MI PEDIDO</h1>
@@ -37,7 +37,7 @@ if (cart.length === 0) {
       <h2 className="title-cart">Mi Pedido</h2>
       <div className="container-table">   
         <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">  
-          <thead>       
+          <thead>        
             <tr> 
               <th className="title is-5">Producto</th>
               <th className="title is-5">Nombre</th>
@@ -75,11 +75,11 @@ if (cart.length === 0) {
                   </Button>
                 </td> 
                 <td className="text-card-cart text-center divider-card-cart">${cartItem.quantity * cartItem.price}</td>
-                <Button className="button is-danger img-eliminar"   
+                <Button className="img-eliminar button is-danger"   
                   onClick={() => removeItem(cartItem.id)} >    
                   <img src="icon-trash.png" alt="Delete" />                 
-                  </Button>                      
-              </tr>    
+                  </Button>                        
+              </tr>     
             ))}  
           </tbody>
           

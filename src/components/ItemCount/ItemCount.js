@@ -1,5 +1,5 @@
  import {  useState } from 'react';
-import { Button } from 'react-bulma-components';
+ import { Button } from 'react-bulma-components';
  import './ItemCount.css';
  
  export const ItemCount = ({ initial, stock, onAdd }) => { 

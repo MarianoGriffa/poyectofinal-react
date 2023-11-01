@@ -6,15 +6,20 @@
   align-items: center;
 }
 
+.app-content {
+  padding: 40px 20px; 
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+}  
+
 .title-cart {
   font-size: 2rem;
   text-align: center;
-  margin:  30px 0; 
+  margin:   0 0 40px;  
   text-transform: uppercase;
 } 
  
 .img-pedido {
-  object-fit: cover;  
+  object-fit: cover;   
 }   
 
 .image.is-64x64 {
@@ -24,7 +29,7 @@
 .img-eliminar img {
   color: white;
   width: 22px;
-}
+} 
  
 .total-price-cart {
   font-size: 1.3rem; 

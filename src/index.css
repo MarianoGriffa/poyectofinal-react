@@ -192,7 +192,9 @@ footer{
 .container-form .content-form {
   max-width: 800px;
   margin: 0 auto; 
-}
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  padding: 20px 40px;  
+}  
 
 .footer-form {
   display: flex; 
@@ -202,7 +204,7 @@ footer{
   max-width: 800px;  
 }
 
-.footer-volver {
+.footer-volver { 
   margin: 0;
 }  
 
