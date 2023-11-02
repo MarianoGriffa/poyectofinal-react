@@ -6,8 +6,8 @@ import '../../index.css';
   return ( 
   <nav className="is-primary navbar">  
      <Link to="/" >
-     <p className="title navbar-brand">KiwiShore</p> 
-     </Link>  
+     <p className="title navbar-brand">KiwiStore</p> 
+     </Link>   
     <div className="navbar-menu">      
      <div className="navbar-start">    
         <NavLink to={`/`} className={({isActive}) => isActive ? 'ActiveOption' :    'Option' }>Todos</NavLink>  
