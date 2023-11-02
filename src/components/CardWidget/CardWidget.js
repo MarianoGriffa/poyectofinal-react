@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 export const CardWidget =  () => {   
   const { quantityTotal } = useContext(CartContext); 
 
-  const navigate = useNavigate();  
+  const navigate = useNavigate();   
   const handleViewCart = () => navigate("/cart"); 
    
-  return (   
+  return (    
       <button   
           className="bag"     
           onClick={handleViewCart}>  
