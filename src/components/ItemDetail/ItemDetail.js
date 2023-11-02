@@ -40,11 +40,11 @@ const showMessage = (quantity) =>  {
          src={ item.imgUrl } alt={ item.name } >      
          </img>                   
         <Card.Content  className="card-content"> 
-          <div className="media-content">  
-            <h6 className="subtitle is-5 mb-4">{ item.descrip }</h6>  
-            <p className="title is-4 mt-1 mb-6">  
-            Precio: $<strong  
-            className="size-3"     
+          <div className="media-content">   
+            <h6 className="subtitle is-5 mb-4">{ item.name }</h6>  
+            <p className="title is-4 mt-1 mb-6">     
+            Precio: $<strong    
+            className="size-3"      
             >{ item.price }</strong></p>      
             <p className="subtitle is-6 mb-2">Stock: { item.stock }</p>     
           </div>        
