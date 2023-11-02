@@ -25,7 +25,7 @@ export const Checkout = () => {
   const handleBackToCart = () => navigate("/cart") 
   const handleBackToHome = () => navigate("/") 
  
-  const generarOrden = (evt) => {   
+  const generarOrden = (evt) => {    
  
     evt.preventDefault()    
 
@@ -83,7 +83,7 @@ export const Checkout = () => {
             <Form.Field>       
               <Form.Label className="label">Nombre:</Form.Label>
               <Form.Control>
-              <Form.Input
+              <Form.Input 
                 value={dataForm.name} 
                 onChange={handleOnChange} 
                 type="text"    
@@ -135,13 +135,13 @@ export const Checkout = () => {
             <Button className="footer-volver button is-dark is-outlined"
              onClick={handleBackToCart}   
             >     
-              Volver al carrito  
-            </Button>    
+              Volver al pedido  
+            </Button>     
             <div colSpan="4"></div>
             <Button className="button is-primary" 
              type="submit"> 
                Finalizar compra   
-            </Button>       
+            </Button>         
             </Form.Field>     
             </form>
         </Content>  

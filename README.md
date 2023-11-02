@@ -1,14 +1,14 @@
-# Kiwishore - e-commerce
-
+# Kiwistore - Clothes Man
+ 
 Este proyecto es un e-commerce de ropa de hombre recien comenzando, desarrollado como el curso de React de Coderhouse. La idea es poner en practicas todo los aprendido durante el curso y hacer una aplicacion real.
 ### [**¡Dale click -> KiwiStore!**](https://kiwistore.netlify.app)  
 
-1. Clonar el repositorio:
-  
+1. Clonar el repositorio: 
+   
 ```
 git clone https://github.com/MarianoGriffa/poyectofinal-react.git
 ``` 
-
+ 
 2. Navegar al directorio del proyecto:
 
 ```
@@ -52,7 +52,7 @@ Además de las tecnologías trabajadas en clase, se utilizaron las siguientes de
 - [**Bulma:**](https://bulma.io/) para facilitar el diseño responsivo del sitio web, proporcionando un conjunto de estilos y componentes predefinidos.
 - [**Bulma React components:**](https://react-bulma.dev/en) para trabajar un poco con los estilos de los componentes.
 - [**Bootstrap Icons:**](https://icons.getbootstrap.com/) para buscar iconos personalizables e integrarlos a mi sitio.   
-- [**React spinners:**](https://www.npmjs.com/package/react-spinners?activeTab=readme) para mostrarle al usuario indicadores de carga atractivos durante el procesamiento de la información.
+- [**React spinners:**](https://www.npmjs.com/package/react-spinners) para mostrarle al usuario indicadores de carga atractivos durante el procesamiento de la información. 
 - [**SweetAlert:**](https://sweetalert2.github.io/#download) para crear y personalizar mensajes de alerta con una apariencia atractiva y amigable para el usuario.   
  
 
