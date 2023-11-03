@@ -22,11 +22,11 @@ import "./index.css";
         <Route path='/item/:itemId' element={<ItemDetailsContainer />} />
         <Route path='/cart' element={<Cart />} />  
         <Route path='/checkout' element={<Checkout />} />  
-        {/* <Route path='*' element={<h1>404 NOT FOUND</h1>} />    */}
+         <Route path='*' element={<h1>404 NOT FOUND</h1>} />  
      </Routes>          
       <Footer />    
-     </CartProvider>      
-   </BrowserRouter>     
+     </CartProvider>       
+   </BrowserRouter>      
     </div>                   
       
  

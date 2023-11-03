@@ -1,6 +1,5 @@
 import {  useContext, useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
-// import {  useNavigate } from "react-router-dom"; 
 import { CartContext } from "../../context/CartContext";
 import {  Card } from "react-bulma-components"; 
 import Swal from "sweetalert2";  
@@ -18,9 +17,7 @@ const onAdd = (quantity) => {
   setIsCant(true);  
   showMessage(quantity);        
 }     
-
-// const navigate = useNavigate(); 
-// const handleBackToHome = navigate("/") 
+ 
 
 const showMessage = (quantity) =>  {
   Swal.fire({  
