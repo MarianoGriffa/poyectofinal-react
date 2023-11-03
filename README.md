@@ -1,9 +1,9 @@
 # Kiwistore - Clothes Man
  
 Este proyecto es un e-commerce de ropa de hombre recien comenzando, desarrollado como el curso de React de Coderhouse. La idea es poner en practicas todo los aprendido durante el curso y hacer una aplicacion real.
-### [**¡Dale click -> KiwiStore!**](https://kiwistore.netlify.app)  
+### [**¡Dale click -> KiwiStore!**](https://kiwi-store.netlify.app)  
 
-1. Clonar el repositorio: 
+1. Clonar el repositorio:  
    
 ```
 git clone https://github.com/MarianoGriffa/poyectofinal-react.git
@@ -56,4 +56,4 @@ Además de las tecnologías trabajadas en clase, se utilizaron las siguientes de
 - [**SweetAlert:**](https://sweetalert2.github.io/#download) para crear y personalizar mensajes de alerta con una apariencia atractiva y amigable para el usuario.   
  
 
-### [**¡Mira el e-commerce KiwiStore!**](https://kiwistore.netlify.app) 
+### [**¡Mira el e-commerce KiwiStore!**](https://kiwi-store.netlify.app)  
