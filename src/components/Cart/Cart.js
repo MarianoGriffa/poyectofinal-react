@@ -17,7 +17,7 @@ if (cart.length === 0) {
   return (
     <div className="container-pedido-void"> 
       <h1 className="title is-2">MI PEDIDO</h1>
-      <h2 className="subtitle">Tu carrito está vacío :(</h2>
+      <h2 className="subtitle">Tu carrito está vacío :(</h2> 
       <div className="empty-cart-container"> 
         <div>    
           <img    
@@ -72,7 +72,7 @@ if (cart.length === 0) {
                    onClick={() => addQuantity(cartItem.id)}
                     disabled={cartItem.stock === 0}>
                   +
-                  </Button>
+                  </Button> 
                 </td> 
                 <td className="text-card-cart text-center divider-card-cart">${cartItem.quantity * cartItem.price}</td>
                 <Button className="img-eliminar button is-danger"   
@@ -90,8 +90,8 @@ if (cart.length === 0) {
                 <Button 
                 className="btn-empty-cart button is-danger" 
                 onClick={clearCart}>
-                Vaciar carrito</Button> 
-              </div>   
+                Vaciar pedido</Button> 
+              </div>    
               <div className="total-price-cart"
                colSpan="4">TOTAL: ${totalPrice()}</div>          
               <div> 
@@ -99,7 +99,7 @@ if (cart.length === 0) {
                 className="btn-continue-buy button is-success" 
                 onClick={handleGoToCheckout}>   
                 Continuar compra</Button> 
-              </div>   
+              </div>    
           </div>
       <div className="container-volver">
                 <Button 

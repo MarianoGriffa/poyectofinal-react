@@ -23,9 +23,9 @@ const showMessage = (quantity) =>  {
   Swal.fire({  
     position: 'botton-end',   
     icon: 'success',
-    title: `Agregaste ${quantity} producto al carrito`,
+    title: `Agregaste ${quantity} producto al pedido`,
     showConfirmButton: false, 
-    timer: 1500     
+    timer: 1500      
   })  
 }
 
@@ -51,8 +51,8 @@ const showMessage = (quantity) =>  {
             <> 
             <Link to="/cart" 
           className="button is-info m-4"
-          >Ver carrito</Link>      
-           <Link to="/" 
+          >Ver pedido</Link>      
+           <Link to="/"  
             className="button is-info is-light m-4"
             >Seguir comprando</Link>   
             </> 

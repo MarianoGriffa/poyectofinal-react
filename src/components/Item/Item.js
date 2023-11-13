@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Item =  memo(  ({ item } ) => {
      
   return ( 
-  <div className="container" key={item.id}>  
+  <div className="container" key={item.id}>   
     <section>  
     <div className="columns">    
   
@@ -29,10 +29,10 @@ export const Item =  memo(  ({ item } ) => {
         </div>   
        </div>  
      </div>
-     </div>
+     </div> 
      </section>  
    </div>
  
   ) 
 } 
-)
+) 
